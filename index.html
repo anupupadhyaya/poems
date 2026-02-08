@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="as">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Poetry of Nishanta Parajuli | নিশান্ত পৰাজুলী</title>
+    <title>Poetry of Nishanta Parajuli | নিশান্ত পৰাজুলীৰ কবিতা</title>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Playfair+Display:wght@400;700&family=Great+Vibes&family=Noto+Serif+Bengali:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
         * {
@@ -15,13 +15,12 @@
         body {
             background: linear-gradient(135deg, #0d0d1a 0%, #1a1a2e 30%, #16213e 70%, #0f0f23 100%);
             min-height: 100vh;
-            font-family: 'Cormorant Garamond', 'Noto Serif Bengali', serif;
+            font-family: 'Noto Serif Bengali', 'Cormorant Garamond', serif;
             color: #e8e8e8;
-            line-height: 1.9;
+            line-height: 2;
             overflow-x: hidden;
         }
 
-        /* Floating particles background */
         .particles {
             position: fixed;
             top: 0;
@@ -102,6 +101,13 @@
             font-style: italic;
         }
 
+        header .subtitle-assamese {
+            font-family: 'Noto Serif Bengali', serif;
+            font-size: 1.2rem;
+            color: #888;
+            margin-top: 5px;
+        }
+
         header .dates {
             margin-top: 20px;
             font-size: 1.1rem;
@@ -109,7 +115,6 @@
             letter-spacing: 2px;
         }
 
-        /* About Section */
         .about-section {
             max-width: 900px;
             margin: 0 auto;
@@ -121,13 +126,14 @@
             font-family: 'Great Vibes', cursive;
             font-size: 2.5rem;
             color: #d4af37;
-            margin-bottom: 40px;
+            margin-bottom: 10px;
         }
 
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 30px;
+        .about-section .h2-assamese {
+            font-family: 'Noto Serif Bengali', serif;
+            font-size: 1.5rem;
+            color: #888;
+            margin-bottom: 40px;
         }
 
         .about-text {
@@ -143,10 +149,6 @@
 
         .about-text p {
             margin-bottom: 20px;
-        }
-
-        .about-text p:last-child {
-            margin-bottom: 0;
         }
 
         .highlight-quote {
@@ -185,9 +187,64 @@
         }
 
         .detail-card .value {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Noto Serif Bengali', serif;
             font-size: 1.1rem;
             color: #d4af37;
+        }
+
+        .gallery-section {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 60px 30px;
+        }
+
+        .gallery-section h2 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 2.5rem;
+            color: #d4af37;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .gallery-section .h2-assamese {
+            font-family: 'Noto Serif Bengali', serif;
+            font-size: 1.5rem;
+            color: #888;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            aspect-ratio: 1;
+            background: rgba(255,255,255,0.05);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-item::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.5) 0%, transparent 50%);
+            pointer-events: none;
         }
 
         nav {
@@ -204,10 +261,11 @@
         nav a {
             color: #888;
             text-decoration: none;
-            margin: 0 25px;
+            margin: 0 20px;
             font-size: 1.1rem;
             transition: all 0.3s;
             position: relative;
+            font-family: 'Noto Serif Bengali', serif;
         }
 
         nav a::after {
@@ -237,15 +295,22 @@
 
         .section-title {
             font-family: 'Playfair Display', serif;
-            font-size: 2.2rem;
+            font-size: 2rem;
             text-align: center;
-            margin: 80px 0 50px;
+            margin: 80px 0 20px;
             color: #fff;
             padding-top: 20px;
-            position: relative;
         }
 
-        .section-title::after {
+        .section-title-assamese {
+            font-family: 'Noto Serif Bengali', serif;
+            font-size: 1.5rem;
+            text-align: center;
+            color: #d4af37;
+            margin-bottom: 50px;
+        }
+
+        .section-title-assamese::after {
             content: '✦';
             display: block;
             margin-top: 15px;
@@ -283,15 +348,23 @@
         }
 
         .poem h3 {
-            font-family: 'Playfair Display', 'Noto Serif Bengali', serif;
-            font-size: 1.5rem;
+            font-family: 'Noto Serif Bengali', serif;
+            font-size: 1.4rem;
             color: #d4af37;
+            margin-bottom: 5px;
+        }
+
+        .poem .title-english {
+            font-family: 'Playfair Display', serif;
+            font-size: 1rem;
+            color: #888;
             margin-bottom: 18px;
+            font-style: italic;
         }
 
         .poem p {
-            font-family: 'Noto Serif Bengali', 'Cormorant Garamond', serif;
-            font-size: 1.3rem;
+            font-family: 'Noto Serif Bengali', serif;
+            font-size: 1.25rem;
             white-space: pre-line;
             color: #e0e0e0;
         }
@@ -301,6 +374,19 @@
             color: #555;
             margin-top: 18px;
             font-style: italic;
+        }
+
+        .poem-image {
+            margin-top: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .poem-image img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 10px;
+            opacity: 0.9;
         }
 
         footer {
@@ -321,6 +407,13 @@
             font-family: 'Great Vibes', cursive;
             font-size: 2rem;
             color: #888;
+            margin-bottom: 5px;
+        }
+
+        footer .memorial-assamese {
+            font-family: 'Noto Serif Bengali', serif;
+            font-size: 1.3rem;
+            color: #666;
             margin-bottom: 15px;
         }
 
@@ -329,6 +422,13 @@
             font-size: 1.3rem;
             color: #aaa;
             letter-spacing: 2px;
+        }
+
+        footer .name-assamese {
+            font-family: 'Noto Serif Bengali', serif;
+            font-size: 1.2rem;
+            color: #d4af37;
+            margin-top: 5px;
         }
 
         footer .dates-footer {
@@ -345,18 +445,26 @@
             font-style: italic;
         }
 
+        footer .message-assamese {
+            font-family: 'Noto Serif Bengali', serif;
+            max-width: 500px;
+            margin: 10px auto 0;
+            font-size: 1.1rem;
+            color: #888;
+        }
+
         @media (max-width: 600px) {
             header h1 { font-size: 2.2rem; }
             .poem { padding: 25px 30px; }
-            nav a { margin: 0 12px; font-size: 0.95rem; }
+            nav a { margin: 0 10px; font-size: 0.9rem; }
             .about-text { padding: 25px; }
-            .section-title { font-size: 1.8rem; }
+            .section-title { font-size: 1.6rem; }
+            .gallery-grid { grid-template-columns: repeat(2, 1fr); }
         }
     </style>
 </head>
 <body>
 
-    <!-- Floating Particles -->
     <div class="particles">
         <div class="particle"></div>
         <div class="particle"></div>
@@ -377,137 +485,207 @@
             <h1>Nishanta Parajuli</h1>
             <p class="assamese-name">নিশান্ত পৰাজুলী</p>
             <p class="subtitle">Poet • Teacher • Artist of Words</p>
-            <p class="dates">28th December 1984 — 2025</p>
+            <p class="subtitle-assamese">কবি • শিক্ষক • শব্দৰ শিল্পী</p>
+            <p class="dates">২৮ ডিচেম্বৰ ১৯৮৪ — ২০২৫</p>
         </header>
 
-        <!-- About Section -->
         <section class="about-section">
             <h2>The Man Behind the Words</h2>
+            <p class="h2-assamese">শব্দৰ আঁৰৰ মানুহজন</p>
             
-            <div class="about-content">
-                <div class="about-text">
-                    <p>
-                        Nishanta Parajuli was born with humble beginnings, completing his schooling at a Government LP School, 
-                        where the seeds of his brilliance were first sown. His thirst for knowledge led him to Gauhati University, 
-                        where he earned both his graduation and Master's degree in History — a subject that shaped his deep 
-                        understanding of the world and its stories.
-                    </p>
-                    <p>
-                        He was particularly sharp — a mind that could cut through complexity with ease. He won quiz competitions, 
-                        building a reputation among friends as someone who knew things others didn't. But knowledge never made him 
-                        distant. He was warm, funny, always ready to crack a joke, deal a hand of cards, or challenge someone to 
-                        a game of carrom.
-                    </p>
-                    <p>
-                        He followed politics closely, understood the pulse of the nation, and had opinions that mattered. 
-                        Yet he remained calm — a quiet presence in any room, observing, smiling, knowing. He dedicated his life 
-                        to teaching at a Higher Secondary School in Jonai, Assam, shaping young minds with the same passion 
-                        he poured into his poetry.
-                    </p>
-                </div>
+            <div class="about-text">
+                <p>
+                    নিশান্ত পৰাজুলীৰ জন্ম হৈছিল এক সাধাৰণ পৰিয়ালত। তেওঁ চৰকাৰী এল.পি. স্কুলত শিক্ষা গ্ৰহণ কৰিছিল, 
+                    য'ত তেওঁৰ প্ৰতিভাৰ বীজ প্ৰথম সিঁচা হৈছিল। জ্ঞানৰ পিয়াহে তেওঁক গুৱাহাটী বিশ্ববিদ্যালয়লৈ লৈ গৈছিল, 
+                    য'ত তেওঁ ইতিহাসত স্নাতক আৰু স্নাতকোত্তৰ ডিগ্ৰী লাভ কৰিছিল — এটা বিষয় যিয়ে পৃথিৱী আৰু ইয়াৰ কাহিনীবোৰৰ 
+                    প্ৰতি তেওঁৰ গভীৰ বুজাবুজি গঢ়ি তুলিছিল।
+                </p>
+                <p>
+                    তেওঁ বিশেষভাৱে চোকা আছিল — এক মন যিয়ে জটিলতাক সহজে কাটিব পাৰিছিল। তেওঁ কুইজ প্ৰতিযোগিতা জিকিছিল, 
+                    বন্ধুসকলৰ মাজত এনে এজন হিচাপে খ্যাতি গঢ়ি তুলিছিল যিয়ে আনে নজনা কথা জানিছিল। কিন্তু জ্ঞানে তেওঁক কেতিয়াও 
+                    দূৰত্ব স্থাপন কৰা নাছিল। তেওঁ আছিল উষ্ণ, মজাৰ, সদায় কৌতুক কৰিবলৈ, তাচ খেলিবলৈ, বা কেৰম খেলিবলৈ সাজু।
+                </p>
+                <p>
+                    তেওঁ ৰাজনীতি ঘনিষ্ঠভাৱে অনুসৰণ কৰিছিল, দেশৰ নাড়ী বুজি পাইছিল, আৰু তেওঁৰ মতামত গুৰুত্বপূৰ্ণ আছিল। 
+                    তথাপিও তেওঁ শান্ত আছিল — যিকোনো কোঠাত এক নিৰৱ উপস্থিতি, পৰ্যবেক্ষণ কৰি, হাঁহি থাকি, জানি থাকি। 
+                    তেওঁ জীৱন উৎসৰ্গা কৰিছিল জোনাই, অসমৰ এখন উচ্চতৰ মাধ্যমিক বিদ্যালয়ত শিক্ষকতা কৰি, 
+                    নতুন প্ৰজন্মক সেই একে আবেগেৰে গঢ়ি তুলিছিল যিটো তেওঁ কবিতাত ঢালিছিল।
+                </p>
             </div>
 
             <div class="highlight-quote">
-                "He was an artist, truly — one who painted not on canvas, but with words that cut deep and lingered long."
+                "তেওঁ সঁচাকৈয়ে এজন শিল্পী আছিল — যিজনে কেনভাছত নহয়, শব্দেৰে আঁকিছিল যিবোৰ গভীৰলৈ কাটি গৈছিল আৰু দীৰ্ঘদিন থাকি গৈছিল।"
             </div>
 
             <div class="life-details">
                 <div class="detail-card">
-                    <div class="label">Education</div>
-                    <div class="value">M.A. in History, Gauhati University</div>
+                    <div class="label">শিক্ষা</div>
+                    <div class="value">এম.এ. ইতিহাস, গুৱাহাটী বিশ্ববিদ্যালয়</div>
                 </div>
                 <div class="detail-card">
-                    <div class="label">Profession</div>
-                    <div class="value">Teacher, Jonai, Assam</div>
+                    <div class="label">পেছা</div>
+                    <div class="value">শিক্ষক, জোনাই, অসম</div>
                 </div>
                 <div class="detail-card">
-                    <div class="label">Passions</div>
-                    <div class="value">Poetry, Quiz, Cards & Carrom</div>
+                    <div class="label">আবেগ</div>
+                    <div class="value">কবিতা, কুইজ, তাচ আৰু কেৰম</div>
                 </div>
             </div>
         </section>
 
+        <!-- Photo Gallery -->
+        <section class="gallery-section">
+            <h2>Memories</h2>
+            <p class="h2-assamese">স্মৃতিবোৰ</p>
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="pic1.jpg" alt="নিশান্ত পৰাজুলী"></div>
+                <div class="gallery-item"><img src="pic2.jpg" alt="নিশান্ত পৰাজুলী"></div>
+                <div class="gallery-item"><img src="pic3.jpg" alt="নিশান্ত পৰাজুলী"></div>
+                <div class="gallery-item"><img src="pic4.jpg" alt="নিশান্ত পৰাজুলী"></div>
+                <div class="gallery-item"><img src="pic5.jpg" alt="নিশান্ত পৰাজুলী"></div>
+                <div class="gallery-item"><img src="pic6.jpg" alt="নিশান্ত পৰাজুলী"></div>
+                <div class="gallery-item"><img src="pic7.jpg" alt="নিশান্ত পৰাজুলী"></div>
+                <div class="gallery-item"><img src="pic8.jpg" alt="নিশান্ত পৰাজুলী"></div>
+            </div>
+        </section>
+
         <nav>
-            <a href="#two-liners">Two-Liners</a>
-            <a href="#three-liners">Three-Liners</a>
-            <a href="#longer">Longer Poems</a>
+            <a href="#short">চুটি পদ</a>
+            <a href="#medium">মজলীয়া কবিতা</a>
+            <a href="#longer">দীঘলীয়া কবিতা</a>
         </nav>
 
         <main>
 
-            <!-- ============ TWO-LINERS ============ -->
-            <h2 class="section-title" id="two-liners">Two-Liners</h2>
+            <!-- ============ SHORT VERSES ============ -->
+            <h2 class="section-title" id="short">Short Verses</h2>
+            <p class="section-title-assamese">চুটি পদ</p>
 
             <div class="poem">
-                <h3>নি:সংগতা | Loneliness</h3>
+                <h3>নি:সংগতা</h3>
+                <div class="title-english">Loneliness</div>
                 <p>ফটিকাৰ ৰাগিৰ দৰেই বাঢ়ি গৈ আছে নি:সংগতা ।</p>
             </div>
 
             <div class="poem">
-                <h3>আন্ধাৰ | Darkness</h3>
+                <h3>আন্ধাৰ</h3>
+                <div class="title-english">Darkness</div>
                 <p>বহু ৰাতি হ'ল নেকি
 আন্ধাৰ নামিছে বুকুলৈ ।</p>
             </div>
 
             <div class="poem">
-                <h3>উজাগৰী নিশা | Sleepless Nights</h3>
+                <h3>উজাগৰী নিশা</h3>
+                <div class="title-english">Sleepless Nights</div>
                 <p>কিয় জানো, উজাগৰী নিশাবোৰ
 দুচকুত আঁকি লৈ
-ইম্মান ভাল লাগে!</p>
+ইমান ভাল লাগে!</p>
             </div>
 
             <div class="poem">
-                <h3>সেউজীয়া হৃদয় | Green Heart</h3>
+                <h3>সেউজীয়া হৃদয়</h3>
+                <div class="title-english">Green Heart</div>
                 <p>সেউজীয়াই হ'ব থাকক হৃদয়ৰ ৰং
 হালধীয়া মোৰ ভাল নালাগে!</p>
             </div>
 
             <div class="poem">
-                <h3>নীলা আকাশ | Blue Sky</h3>
+                <h3>নীলা আকাশ</h3>
+                <div class="title-english">Blue Sky</div>
                 <p>কোনে ক'লে নীলা মানে আকাশ
 নীলা মোৰ হৃদয়ৰ ৰংও হ'ব পাৰে...</p>
             </div>
 
             <div class="poem">
                 <h3>আবতৰীয়া দিপাৱলী</h3>
+                <div class="title-english">Untimely Diwali</div>
                 <p>আবতৰীয়া দিপাৱলী নাপাতিলেই হয় আৰু দেই।</p>
             </div>
 
-
-            <!-- ============ THREE-LINERS ============ -->
-            <h2 class="section-title" id="three-liners">Three-Liners</h2>
+            <div class="poem">
+                <h3>সুখ আৰু দুখ</h3>
+                <div class="title-english">Joy and Sorrow</div>
+                <p>সুখী হ'ব পৰা যেতিয়াৰে দুখ মোৰ আছে....
+অসুখী হ'ব পৰা যেতিয়াৰে সুখ মোৰ নাই!</p>
+            </div>
 
             <div class="poem">
-                <h3>চিগাৰেট | Cigarette</h3>
+                <h3>উষা আৰু নিসংগতা</h3>
+                <div class="title-english">Dawn and Solitude</div>
+                <p>ঠেটুৱৈ ধৰা জাৰত শুটি হৈ আছে উষা
+আৰু দীঘল হৈ গৈ থাকে নিসংগতা....</p>
+            </div>
+
+            <div class="poem">
+                <h3>গোলাপৰ কলি</h3>
+                <div class="title-english">The Rose Bud</div>
+                <p>মই বিচৰা গোলাপৰ কলিটি কোনোবাই ছিঙি লৈ গ'ল
+তথাপিতু তাৰ সৌন্দৰ্য্য এতিয়াও মোৰ দুচকুত....</p>
+            </div>
+
+            <div class="poem">
+                <h3>দিব্যলতাক</h3>
+                <div class="title-english">To Divyalata</div>
+                <p>ইমান বেছি সুখ নিদিবা দিব্যলতা
+যাতে মই প্ৰয়োজনতকৈ বেছি অসুখী হৈ পৰো!</p>
+            </div>
+
+            <div class="poem">
+                <h3>নিসংগতা আৰু নিৰ্জনতা</h3>
+                <div class="title-english">Loneliness and Solitude</div>
+                <p>নিসংগতা আৰু নিৰ্জনতাক আকোৱালি লৈ জিয়াই আছো
+ভাল পোৱা মানুহৰ সংখ্যা কমি আহিছে দিনক দিনে...
+(শালা বেইমান জীৱন....)</p>
+            </div>
+
+            <div class="poem">
+                <h3>জালুকবাৰী</h3>
+                <div class="title-english">Jalukbari</div>
+                <p>জালুকবাৰীক চোলৰ জেপাত লৈ ফুৰিব পৰা হ'লে......
+জালুকবাৰীৰ মোহত পৰি বৰবাদ হ'ল জীৱন....
+(শালা বেইমান জীৱন.....)</p>
+            </div>
+
+            <!-- ============ MEDIUM POEMS ============ -->
+            <h2 class="section-title" id="medium">Medium Poems</h2>
+            <p class="section-title-assamese">মজলীয়া কবিতা</p>
+
+            <div class="poem">
+                <h3>চিগাৰেট</h3>
+                <div class="title-english">Cigarette</div>
                 <p>চিগাৰেটো যে আৰু
-কেৱলমাত্ৰ মোৰ সুখৰ কাৰনেই
+কেৱলমাত্ৰ মোৰ সুখৰ কাৰণেই
 নিজেই জলি-পুৰি শেষ হৈ যায়
 দু ওঁঠৰ শ্মশানত ।</p>
             </div>
 
             <div class="poem">
-                <h3>গোমা ডাৱৰ | Dark Clouds</h3>
+                <h3>গোমা ডাৱৰ</h3>
+                <div class="title-english">Dark Clouds</div>
                 <p>আকাশৰ গোমা ডাৱৰ
 দুখ হৈ বিয়পি পৰিছে — মোৰ হৃদয়ত
 তুমি তৰাফুল হৈ ফুলি উঠাৰ কথা ।</p>
             </div>
 
             <div class="poem">
-                <h3>জেতুকাৰ বোল | Henna</h3>
+                <h3>জেতুকাৰ বোল</h3>
+                <div class="title-english">Henna</div>
                 <p>তোমাৰ দুহাতৰ জেতুকাৰ বোল
 ফুল হৈ ফুলি উঠিছে — মোৰ হৃদয়ত
 মই হৃদয়ত এখন বাগিছা পতাৰ কথা ।</p>
             </div>
 
             <div class="poem">
-                <h3>এডাল চুলি | A Strand of Hair</h3>
+                <h3>এডাল চুলি</h3>
+                <div class="title-english">A Strand of Hair</div>
                 <p>কৰবাত জানো পঢ়িছিলো —
 তুমি দিয়া বহাগৰ শুভেচ্ছা পত্ৰখনত এডাল চুলি পালো
 জীৱনটোতেই আওল লাগিল!</p>
             </div>
 
             <div class="poem">
-                <h3>লুকাভাকু | Hide and Seek</h3>
+                <h3>লুকাভাকু</h3>
+                <div class="title-english">Hide and Seek</div>
                 <p>লুকাভাকুৰ খেল খেলিছে হৃদয়ে মোৰ
 এই পাইছো এই হেৰুৱাইছো তোমাক
 ঠিক যেন ছাঁ-পোহৰৰ খেল...
@@ -517,7 +695,8 @@
             </div>
 
             <div class="poem">
-                <h3>দুখৰ বৰষুণ | Rain of Sorrow</h3>
+                <h3>দুখৰ বৰষুণ</h3>
+                <div class="title-english">Rain of Sorrow</div>
                 <p>দুখৰ বৰষুণত তিতি তিতি
 এদিন তোমাক সুধিছিলো
 কিমান সুখ পালে তুমি সুখী হ'বা
@@ -527,7 +706,8 @@
             </div>
 
             <div class="poem">
-                <h3>জোনাক | Moonlight</h3>
+                <h3>জোনাক দুধনৈত</h3>
+                <div class="title-english">Moonlight on Dudhnoi</div>
                 <p>আজিও জোনাক নামিছে দুধনৈত
 আৰু হৃদয়ত সাংগোপনে নামিছা তুমি
 কিয় জানো নিখাঁচৰ চৰাই বিলাকে গাই যায়
@@ -535,12 +715,154 @@
 ক'তেনু আহাগৈ তুমি...</p>
             </div>
 
+            <div class="poem">
+                <h3>দিব্যলতা</h3>
+                <div class="title-english">Divyalata</div>
+                <p>দিব্যলতা মোৰ প্ৰিয়াসীৰ নাম নহয়
+মোৰ প্ৰিয়াসীৰ নাম দিব্যলতা নহয়
+দিব্যলতা মোৰ সপোনৰ হাতে লিখা এক দস্তাবেজ...</p>
+            </div>
+
+            <div class="poem">
+                <h3>প্ৰেমৰ কথা</h3>
+                <div class="title-english">Words of Love</div>
+                <p>কেনেকৈ নু কওঁ তোমাক
+প্ৰেম-ভালপোৱাৰ কথা
+হৃদয়ত যে কেৱল দুখৰেই দিনলিপি!</p>
+            </div>
+
+            <div class="poem">
+                <h3>পৰিভ্ৰমী চৰাই</h3>
+                <div class="title-english">Migratory Bird</div>
+                <p>মই তোমাৰ বুকুৰ অৰণ্যৰ এক পৰিভ্ৰমী চৰাই
+যি বসন্ত শেষ হ'লেই গুছি যাম
+নিজ বাটেদি.....</p>
+            </div>
+
+            <div class="poem">
+                <h3>স্মৃতিৰ গোন্ধ</h3>
+                <div class="title-english">Fragrance of Memories</div>
+                <p>স্মৃতিৰ গোন্ধেৰে আমোলমোলাই আছে
+উজাগৰী নিশা
+সপোনৰ টাঙি ঘৰত তোমাৰ আগমনৰ আশা
+তুমি আহিবা বুলিয়েই তো সাজাই থৈছো মোৰ স্বপ্নৰ টাঙি ঘৰ!</p>
+            </div>
+
+            <div class="poem">
+                <h3>দুখত হাঁহি</h3>
+                <div class="title-english">Smiling in Sorrow</div>
+                <p>এদিন-
+তুমি মোক কৈছিলা
+'দুখত হাঁহি থাকিবা'
+আৰু আজি-
+মই সুখত কান্দিছো....</p>
+            </div>
+
+            <div class="poem">
+                <h3>বুকুৰ জোখ</h3>
+                <div class="title-english">Measure of the Heart</div>
+                <p>মোৰ বুকুৰ জোখ
+ঠিক ছলমান বা ঋতিকৰ দৰে নহ'লেও
+হৃদয়ৰ জোখ কিন্তু
+ৰমিঅ' বা জংকিৰ দৰেই...</p>
+            </div>
+
+            <div class="poem">
+                <h3>অক্টোবৰ</h3>
+                <div class="title-english">October</div>
+                <p>যোৱাটো অক্টোবৰ মাহৰে পৰা
+মোৰ হৃদয়ৰ ঠিকনাটু সলনি হ'ল
+বৰ্তমান ইয়াৰ ঠিকনা
+তোমাৰ বুকুৰ কেকুৰি..</p>
+            </div>
+
+            <div class="poem">
+                <h3>বিশ্বনাথ ঘাট</h3>
+                <div class="title-english">Biswanath Ghat</div>
+                <p>মোৰ শৈশৱৰ অলেখ সপোন, কৈশোৰৰ অলেখ হেঁপাহ আৰু যৌৱনৰ আদি পুৱাৰ প্ৰেম-বিৰহৰ ঠিকনা যত উটুৱাই দিয়াৰ চেষ্টা কৰিছিলো...মোৰ প্ৰিয় বিশ্বনাথ ঘাট।</p>
+            </div>
+
+            <div class="poem">
+                <h3>বগৰীৰ ফুল</h3>
+                <div class="title-english">Bogori Flowers</div>
+                <p>বগৰীৰ ফুল ফুলিছে অ' দিব্যলতা
+যদি ঠিকে থাকে হিচাপ
+আৰু যদিহে নাথাকে
+ঠিকনা হেৰুৱাৰ যন্ত্ৰণা
+তোৰেই শপত
+পকিলে বগৰী
+যাম তোৰ কাষলৈ
+তোৰ আঁচল ভৰাই দিম
+গোট গোট নৰা বগৰী
+বগৰীৰ ফুল ফুলিছে অ' দিব্যলতা......</p>
+            </div>
+
+            <div class="poem">
+                <h3>সপোন ভাঙে</h3>
+                <div class="title-english">Dreams Break</div>
+                <p>পাৰুৱাৰ লানীৰ দৰে বাগুৱা বাই
+ইউকেলিপ্টাছ গছৰ দৰে ওখ হ'ব খোজা সপোন
+হঠাৎ ভাঙে
+খহি পৰে এখন আকাশ
+পুনৰ শূন্যৰ পৰাই আৰম্ভণি
+(সপোনৰ শূন্য...নে শূন্যৰ সপোন!!!!)</p>
+            </div>
+
+            <div class="poem">
+                <h3>প্ৰেম</h3>
+                <div class="title-english">Love (Hindi)</div>
+                <p>সখীয়োঁ মে ঘোলা যায় ফুলোঁ কা ছৱাব
+উছমে ফিৰ মিলাই যায়ে থোড়ী ছী শৰাব
+হোগা ইউঁ নাশা যো তৈয়াৰ
+ৱো প্যাৰ হে প্যাৰ...</p>
+            </div>
+
+            <div class="poem">
+                <h3>একলা চলো</h3>
+                <div class="title-english">Walk Alone</div>
+                <p>যদি তোৰ ডাক শুনে কেউ না আসে তবে একলা চলো ৰে...
+একলা চলো, একলা চলো, একলা চলো ৰে....</p>
+                <div class="poem-image">
+                    <img src="pic2.jpg" alt="নিশান্ত পৰাজুলী">
+                </div>
+            </div>
+
+            <div class="poem">
+                <h3>জয় আই অসম</h3>
+                <div class="title-english">Hail Mother Assam</div>
+                <p>আছে বাৰ টোপ ফুটুৱা নাই....
+ফুটালে বোৰ টোপ ৰখ্যা নাই.....
+জয় আই অসম......</p>
+            </div>
+
+            <div class="poem">
+                <h3>জিন্দাবাদ</h3>
+                <div class="title-english">Zindabad</div>
+                <p>BJP জিন্দাবাদ.....AGP জিন্দাবাদ.....Congress জিন্দাবাদ.....BPF জিন্দাবাদ.....
+"......" জিন্দাবাদ...
+মুৰ্দাবাদ কেৱল আপুনি আৰু মই......</p>
+            </div>
+
+            <div class="poem">
+                <h3>A.T.4 Boys' Hall</h3>
+                <div class="title-english">A.T.4 Boys' Hostel</div>
+                <p>A.T.4 Boys' Hallৰ সন্ধিয়াৰ আড্ডাত
+আলসতা নহয়
+কেৱল চিনেমা, খেলা বা মাইনাৰ কথা
+নিলাম হ'ব লগীয়া হৃদয় বোৰ
+ভাগে ভাগে মেলি থোৱা হয়...</p>
+                <div class="poem-image">
+                    <img src="pic1.jpg" alt="নিশান্ত পৰাজুলী">
+                </div>
+            </div>
 
             <!-- ============ LONGER POEMS ============ -->
             <h2 class="section-title" id="longer">Longer Poems</h2>
+            <p class="section-title-assamese">দীঘলীয়া কবিতা</p>
 
             <div class="poem">
-                <h3>ফাগুনৰ প্ৰেম | Love in Phagun</h3>
+                <h3>ফাগুনৰ প্ৰেম</h3>
+                <div class="title-english">Love in Phagun</div>
                 <p>ফাগুনৰ সৰাপাতত যদি লিখা থাকে
 দুখৰ বিদায়ী ইস্তাহাৰ
 বসন্তৰ কুঁহিপাতত যদিহে থাকে লিখা
@@ -551,90 +873,359 @@
             </div>
 
             <div class="poem">
-                <h3>ফাগুনৰ নিৰ্জন দুপৰীয়া | A Lonely Afternoon in Phagun</h3>
+                <h3>ফাগুনৰ নিৰ্জন দুপৰীয়া</h3>
+                <div class="title-english">A Lonely Afternoon in Phagun</div>
                 <p>ফাগুনৰ কোনোবা নিৰ্জন দুপৰীয়াৰ আততে
 তোমাৰ সতে বিদায়ৰ বেলিকা
-চাগে মুকহৈ পৰিছিলো মই
+চাগে মুখ হৈ পৰিছিলো মই
 আৰু হয়তো তুমিও বোবা হৈ গৈছিলা
-
 আমাৰ মৌনতাত
 ফাগুনৰ সেই নিৰ্জন দুপৰীয়া
 আৰু বেছি নিৰ্জন হৈ উঠিছিল
-
 পুৰণি কলা-বগা কোনোবা চলচ্চিত্ৰৰ
 জীৱন্ত মুহূৰ্তটোক
 ফ্ৰেমত বান্ধি থ'ব পৰা
 সুন্দৰ পেইণ্টিঙৰ দৰেই
-
-ফাগুনৰ সেই নিৰ্জন দুপৰীয়াতো
+ফাগুনৰ সেই নিৰ্জন দুপৰীয়াতো 
 মুখেৰে একো ক'ব নোৱাৰা হৈ
 তুমি বোৱাই দিছিলা দুচকুৰে
 সেই বৈদিক পবিত্ৰ ধাৰা
-সিন্ধু নতুবা গঙ্গাৰ
-
-আৰু মই?
+সিন্ধু নতুবা গংগাৰ
+আৰু মই??
 কি কৰিছিলো মই
 পুৰাতন পুৰাতন বিষাদ গাত মেৰিয়াই লৈ
 উভতনি যাত্ৰা কৰিছিলো
-(উভতনি যাত্ৰা বৰ কঠিন অ' দিব্যলতা... বৰ কঠিন...)
-
-পুনৰ — তোমাক বিদায় জনাই
+(উভতনি যাত্ৰা বৰ কঠিন অ' দিব্যলতা....বৰ কঠিন....)
+পুনৰ-- তোমাক বিদায় জনাই 
 উভতি আহাৰ পথত
 মই চাগে পথ ভুল কৰিছিলো
-সেয়ে হয়তো মই এতিয়াও নিৰুদ্দেশ...</p>
+সেয়ে হয়তো মই এতিয়াও নিৰুদ্দেশ....</p>
             </div>
 
             <div class="poem">
-                <h3>দিব্যলতা | Divyalata</h3>
-                <p>দিব্যলতা মোৰ প্ৰিয়াসীৰ নাম নহয়
-মোৰ প্ৰিয়াসীৰ নাম দিব্যলতা নহয়
-দিব্যলতা মোৰ সপোনৰ হাতে লিখা এক দস্তাবেজ...</p>
-            </div>
-
-            <div class="poem">
-                <h3>এতিয়াও ফাগুনৰ দৰেই | Still Like Phagun</h3>
-                <p>এতিয়াও ফাগুনৰ দৰেই
+                <h3>এতিয়াও ফাগুনৰ দৰেই</h3>
+                <div class="title-english">Still Like Phagun</div>
+                <p>এতিয়া ফাগুনৰ দৰেই 
 কাঙাল মোৰ হৃদয়
 হেৰুৱাই থৈ সৰ্বস্ব
 লাহপাহকৈ বাঢ়ি অহা হেঁপাহ আৰু সপোন বোৰ
-চাৰি পৰিছে এপাহ এপাহকৈ
+সৰি পৰিছে এপাহ এপাহ কৈ
 যন্ত্ৰণাৰ ভৰত
-শিমলুৰ বীজাৰ দৰেই
+শিমলুৰ বীজাৰ দৰেই 
 সউপাখে উৰি ফুৰে হুমুনিয়াহ
 আৰু বৰণ চালাই
-সোঁৱৰণিৰ গভীৰতাত...</p>
+সোঁৱৰণীৰ গভীৰতাত.....</p>
             </div>
 
             <div class="poem">
-                <h3>দিব্যলতাক বিচাৰি | Searching for Divyalata</h3>
+                <h3>দিব্যলতাক বিচাৰি</h3>
+                <div class="title-english">Searching for Divyalata</div>
                 <p>ঠেটুৱৈ ধৰা চিতাত
 শুটি হৈ আছে উষা
 দীঘল হৈ গৈ থাকে নিসংগতা
 এটা এটাকৈ সৰি পৰে দিন
 কেলেণ্ডাৰৰ পাতৰ পৰা
 সময়ে বৰণ চালাই
-আৰু চালাই তাৰ পচাকী নাম
-
-তথাপিতু দুচকুৰ পাতত
+আৰু চালাই তাৰ পোছাকী নাম
+তথাপিতু দুচকুৰ পাতত 
 তোমাক কঢ়িয়াই লৈ ফুৰিছো দিব্যলতা
 সুখে-দুখে, জাহে-চিতে
 কেতিয়াবা উমানন্দ কেতিয়াবা লংকেশ্বৰ
 কেতিয়াবা বালাজী কেতিয়াবা শুক্লেশ্বৰ
-কিছু দিক হেৰোৱা প্ৰাচীন সপোনৰ ঠিকনা বিচাৰি...</p>
+কিছু দিক হেৰোৱা প্ৰাচীন সপোনৰ ঠিকনা বিচাৰি......</p>
             </div>
 
             <div class="poem">
-                <h3>জিন্দাবাদ | Zindabad</h3>
-                <p>BJP জিন্দাবাদ... AGP জিন্দাবাদ... Congress জিন্দাবাদ... BPF জিন্দাবাদ...
-"......" জিন্দাবাদ...
-মুৰ্দাবাদ কেৱল আপুনি আৰু মই...</p>
+                <h3>দুখৰ কথা</h3>
+                <div class="title-english">Words of Sorrow</div>
+                <p>দুখৰ কথা নোকোৱিও অ' কাঞ্চনমতী
+সুখৰ সন্ধান কৰি কৰি অসুখী হোৱা হৃদয়
+লাগ বুলিলেই আনি দিব নোৱাৰো 
+জলফাই বৰণীয়া আবেলি এটা
+তোৰ কালদিলীয়া খোপাত গুজি দিব পাৰাকৈ
+দিয়াত দিব পাৰো
+কল্পতীয়া সপোন এটা
+জীৱনটোক সেউজীয়া কৰি গঢ়ি তুলিবলৈ
+মই নাৰ্চিছাছ নহওঁ অ' কাঞ্চনমতী
+নহওঁ নাৰ্চিছাছ... তইও হ'ব নালাগে দে ক্লিওপেট্ৰা
+মই মই আৰু তই কাঞ্চনমতী হৈয়েই থাক
+দুখৰ কথা নোকোৱি অ' কাঞ্চনমতী
+পাৰিলে দুখক আপোন কৰি ল
+সুখী হ'বি মনাৰ যেতিয়াৰে...
+পুনৰ---কাঞ্চনমতী, কাণে কাণে কথা এটা কওঁ শুন
+             ইকনমিক্সৰ সূত্ৰ মতে জীৱন নচলে অ'
+             নচলে জীৱন, নচলে.......</p>
             </div>
 
             <div class="poem">
-                <h3>জয় আই অসম</h3>
-                <p>আসে বাৰ টোপ ফুটুৱা নাই...
-ফুটালে বোৰ টোপ ৰখ্যা নাই...
-জয় আই অসম...</p>
+                <h3>দুখৰ ঋতু</h3>
+                <div class="title-english">Season of Sorrow</div>
+                <p>দুখৰ কোনো ঋতু নাথাকে
+হৃদয়ৰ পাৰ ভাঙি যিকোনো সময়তে
+আহিব পাৰে এখোপামান দুখ
+আৰু দি থৈ যাব পাৰে
+স্বপ্নৰ দৰেই কৰুণ-মধুৰ কিছু নষ্টালজিয়া
+সুখবোৰ বৰ ক্ষণস্থায়ী
+এই আহে আৰু যায়
+সুখত নাই কোনো স্মৃতিৰ গোন্ধ
+দুখে আমাক মতলীয়া কৰি ৰাখিব পাৰে উৰেটো ৰাতি
+কিন্তু সুখত নাই কোনো মাদকতা..</p>
+            </div>
+
+            <div class="poem">
+                <h3>শনিবাৰ</h3>
+                <div class="title-english">Saturday</div>
+                <p>আজি শনিবাৰ
+সপ্তাহটুৰ সমস্ত অৱসাদ পাহৰি
+সুখ নিদ্ৰাত ঢালি পৰিম আজি
+সপ্তাহটুৰ সমাপ্তি উদযাপনৰ বাবে
+দুপেগ হুইস্কি আৰু অলপ চ'ডা
+যিহেতু আজি শনিবাৰ
+যিহেতু আজি শনিবাৰ
+ৰাতি দেৰিলৈ থাকিম
+প্ৰিয় বন্ধু এজনাৰ কবিতা আওৰাম
+প্ৰিয় গীতাৰ কলি এটি গুণগুণাম
+শৈশৱত--
+শনিবৰীয়া সপোনত সোমাই পৰিছিল
+দেওবৰীয়া হাটৰ চাবি এখন
+একাপ চাহ আৰু এটুকুৰা পাওৰুটি
+নতুবা এটকাৰ বৰা মিছাল তেৰা সোৱাদ
+কৈশোৰত--
+আমীৰ খান নতুবা অমিতাভ বচ্চনে শানি ধৰিছিল
+শনিবৰীয়া সপোনৰ আকাশ
+নতুবা শনিবৰীয়া সপোনৰ আকাশত
+লোমে লোমে উলামি পৰিছিল
+গাওঁ ৰে কাৰোবাৰ বাৰীৰ লেটেকু পানীয়ল
+যৌৱনৰ দুৱাৰদলিত--
+শনিবৰীয়া সপোন এটাৰ বিষয় 
+দিব্যলতা আৰু কেৱল দিব্যলতা
+পাৰ্কৰ এচুক আৰু লানি নিচিগা কথা
+দিব্যলতা...দিব্যলতা...
+আজি শনিবাৰ
+খেখাৰ চিগাৰেটত অন্তিম টান মাৰি
+হেজাৰ শনিবৰীয়া সপোনক
+আলফুলে বুকুত সাবটি লৈ
+ঢালি পৰিম সুখ নিদ্ৰাত
+আৰু এনেকৈয়ে চাগে কেতিয়াবা
+হেজাৰ বিফল সপোনক বুকুত বান্ধি লৈ
+ঢালি পৰিম চিৰ নিদ্ৰাত
+সেই দিনাখন কি বাৰ হ'ব, কি বাৰ হ'ব
+হ'ব নে শনিবাৰ
+মই ঠিক নাজানো
+(সঁচাতে আংকাত মই বৰ কেঁচা আছিলো...).</p>
+            </div>
+
+            <div class="poem">
+                <h3>মোৰ সপোনৰ উপত্যকাত</h3>
+                <div class="title-english">In the Valley of My Dreams</div>
+                <p>কালি হঠাৎ
+মোৰ সপোনৰ উপত্যকালৈ
+তেওঁ নামি আহিছিল
+(যদিও তেওঁ মোৰ সপোনৰ সীমান্তৰ বাহিৰত বাস কৰে)
+আগৰ দৰেই আছিল তেওঁ
+সেই ভুৱন ভুলোৱা হাঁহি
+সেই লাস্যময়ী খোজ
+সুধিছিলো তেওঁক
+মোৰ সপোনৰ পৰিসৰৰ বাহিৰত থাকি
+সুখী নে তুমি
+একো নিক'লে
+মাথোঁ মিচিকিয়া হাঁহি এটা মাৰি আঁতৰি গ'ল তেওঁ
+তেওঁ চাগে মোক ভুল বুজিছিল
+নে মই কিবা ভুল কৰিছিলো.....
+পুনৰ--দিব্যলতা, যেতিয়া তোমাৰ ভুল ভাঙিব
+তুমি হয়তো তোমাৰ সপোন উপত্যকাৰ পৰা
+হাত বাউল দি মাতিবা মোক
+আৰু মই 
+হয়তো অভিমান কৰি শুই থাকিম
+কাৰোবাৰ হিম শীতল আলিংগনত
+মৃত্যুৰ উপত্যকাত.........</p>
+            </div>
+
+            <div class="poem">
+                <h3>অপৰাধী হোৱাৰ যন্ত্ৰণা</h3>
+                <div class="title-english">The Pain of Being Guilty</div>
+                <p>হৃদয়ত আহৰহ কঢ়িয়াই লৈ ফুৰিছো
+অপৰাধী হোৱাৰ যন্ত্ৰণা
+ভুল কৰো বুলি চাগে নাকাৰে কোনেও
+হৈ যায় অজানিতে
+যাক প্ৰাণতকৈও বেছি ভাল পোৱা যায়
+তেওঁৰেই দৃষ্টিত হৈ পৰে আপুনি
+পৃথিৱীৰ আটাইতকৈ ঘৃণনীয় ব্যক্তি
+আপুনি মৰমৰ ভাষাৰে ক'ব খোজা
+সকলোবোৰ কথাই 
+তেওঁ ঘৃণাৰ ঢালেৰে উফৰাই পেলায়
+আৰু অতৰ্কিতে আপোনাক বিদায় দি দিয়ে
+নিজৰ জীৱনৰ পৰা
+এনে সময়ত আপুনি কি কৰিব
+কি কৰিব আপুনি
+হয়তো কান্দিব, অনুতাপ কৰিব, নিসংগতাক আকোৱালি ল'ব
+আৰু মই
+কি কৰিম মই
+চাগে আওৰাম
+প্ৰিয় বন্ধু এজনাৰ কবিতা
+"সুখত নু কুন
+দুখত যে ফটিকা
+সেয়ে কৈছো বন্ধু
+জীৱন সন্ধি ভাঙি নপঢ়িবা....."</p>
+            </div>
+
+            <div class="poem">
+                <h3>একান্ত ব্যক্তিগত</h3>
+                <div class="title-english">Absolutely Personal</div>
+                <p>কিছু এক একান্ত ব্যক্তিগত প্ৰসংগ বুলি ক'বলৈ হ'লে
+নিজৰ নামত
+পুৰণি এটা এলবামৰ গৰাকী মই
+যত সম্প্ৰতি চকু ফুৰালেই
+বিধ্বস্ত কিছু বিবৰ্ণ ছায়া সবাই দুচকুত জলপৰীয়া ধৰে
+আৰু সংক্ৰমণ ঘটায় পুৰণি এটা ৰোগৰ
+যি ৰোগত আক্ৰান্ত মই
+সেয়েহে একান্ত ইচ্ছা আৰু অনুভৱ স্বত্বেও
+মেলিবলৈ ভয় হয় তাৰ পৃষ্ঠা
+জানেনে চিনাকী চিনাকী গোন্ধে মতলীয়া কৰি তোলে মোৰ আউপুৰণি ৰোগটোক..........</p>
+            </div>
+
+            <div class="poem">
+                <h3>জোনাক</h3>
+                <div class="title-english">Moonlight</div>
+                <p>মোৰ উৰুখা পাজাটিৰ তলত
+যিদিনাখন জোনাক নামিব
+দুবৰিত সোতালৰ মুকুতা সৰিব
+তেতিয়াই মোৰ নামটু আঁকি দিম
+কোনো এক সৰস্ৰোতা নদীৰ বুকুত
+আৰু এদিন আকাশৰ তলত ৰৈ গাম
+"জুনবাই এ বেজী এটি দিয়া......"</p>
+            </div>
+
+            <div class="poem">
+                <h3>স্বাধীনতাৰ অৰ্থ</h3>
+                <div class="title-english">The Meaning of Freedom</div>
+                <p>মুদ্ৰাস্ফীতিয়ে কাঙাল কৰা পৃথিৱী
+ভোকত ককবকাই থকা মোৰ দেশ
+(এক কিলো পিঁয়াজৰ দাম ষাঠি টকা, এক কিলো চাউলৰ...)
+ধেমাজিৰ বানপানীয়ে বুকুৰ পাৰ ভাঙে
+ভীমাজুলীৰ চিতাত অলেখ সপোন জ্বলে
+B.T.A.D.-ৰ সাম্প্ৰদায়িক সংঘৰ্ষই সন্ধিহান কৰি তোলে
+জীৱন বিষয়ক প্ৰশ্ন
+বিভাজনৰ ৰাজনীতিৰ আঁচোৰত
+মোৰ দেশ এক গিনিপিগ
+কি অৰ্থ হ'ব পাৰে মোৰ বাবে এই স্বাধীনতাৰ
+কি অৰ্থ হ'ব পাৰে!!!</p>
+            </div>
+
+            <div class="poem">
+                <h3>নিৰৱতাৰ খেল</h3>
+                <div class="title-english">The Game of Silence</div>
+                <p>ৰাতিৰ নীলা আত্যাসাৰত অতিষ্ঠ হৈ
+আকৌ খেলিছো নিৰৱতা নিৰৱতা খেল
+নিসংগতাৰ সতে
+কিমান খাজিম আৰু
+চিগাৰেটৰ ধোঁৱাৰ কুণ্ডলী পকাই পকাই
+শূন্যত বেবিলনৰ বাগিছা
+কিমান ফুৰিম আৰু
+হেৰোৱা সপোনৰ ঠিকনা বিচাৰি
+উমানন্দ, বালাজী, লংকেশ্বৰ
+ক'ত আছে ক'ত আছে স্বৰ্গদেৱৰ সেই সোণৰ জখলা
+যত বাগালেই পাম মই
+মোৰ ইপ্সিত জোনটো
+পুনৰ--সুখৰ সন্ধান কৰি কৰি
+           অসুখী হৈ পৰিছো অ' দিব্যলতা
+           তুমি চাগে সুখী
+           সুখী নে তুমি......</p>
+            </div>
+
+            <div class="poem">
+                <h3>সন্ধিয়া</h3>
+                <div class="title-english">Evening</div>
+                <p>ডুব গ'ল পোহৰৰ সকলো উৎসৱ
+এতিয়া মাথোঁ আন্ধাৰৰ খেলা
+দুখৰ উৎসৱ উদযাপনৰ সময়
+তুমি মোৰ সপোনৰ সীমান্তৰ বাহিৰৰ
+এক নিৰৱধি নদী-দিব্যলতা
+তোমাৰ কাষৰ ঝাউ বনাতে
+হাইকলি পখীৰ কলৰৱক বুকুত সাৱটি
+শুই আছে মোৰ প্ৰিয় নিৰ্জনতা
+আন্ধাৰ ৰাতিৰ আৱৰণ ভেদ কৰি
+ক'ৰ পৰা জানো বতাহত ভাঁহি আহিছে
+তোমাৰ খোপাৰ সেই খৰিকাজাই খৰিকাজাই গোন্ধ
+পুনৰ--সন্ধিয়াবোৰ বাৰু কিয় আহে
+            কঢ়িয়াই লৈ
+            কিছু পুৰাতন পুৰাতন দুখ
+            আৰু শুনাই থৈ যাবলৈ বিষাদৰ গান
+             তুমি চাগে জানা দিব্যলতা
+             চাগে তুমি নাজানা.......</p>
+            </div>
+
+            <div class="poem">
+                <h3>জোনাক জালুকবাৰীত</h3>
+                <div class="title-english">Moonlight in Jalukbari</div>
+                <p>শিৰোনামত-- জোনাক গলিছে জালুকবাৰীত
+সেই একেই জোনাক
+যি জোনাকত এদিন সপোন খিজিছিলো
+যি জোনাকত এদিন আওৰাইছিলো জীৱনৰ আদিপাঠ
+যি জোনাকত এদিন সোতালত ধৰি পৰি শুনিছিলো
+আইতাৰ মুখৰ সাধু কথা
+সেই একেই জোনাক
+যি জোনাকত এদিন
+মোৰ সমগ্ৰ বিফলতাক আকোৱালি
+তুমি অহাৰ কথা মোৰ কাষলৈ
+অথচ
+সেই একেই জোনাকত আজি খুচৰি ফুৰিছো
+কিছু প্ৰাচীন সপোনৰ ভগ্নাৱশেষ
+কৃষ্ণচূড়াৰ নঙঠা ডালত
+সেউজীয়াৰ জিলমিলনি....কিছু সোঁৱৰণী....</p>
+            </div>
+
+            <div class="poem">
+                <h3>আজি আকৌ</h3>
+                <div class="title-english">Today Again</div>
+                <p>আজি আকৌ দুহাত দাঙি
+আকাশ চুই চুৱাৰ মন
+আজি আকৌ জীৱনৰ কেনভাছত সপোন এটি আঁকি দিয়াৰ এক পুৰণি হেঁপাহ
+আজি আকৌ কাৰোবাৰ কালদিলীয়া খোপাত মুখ লুকুৱাই
+পৃথিৱীৰ প্ৰাচীনতকৈও প্ৰাচীন 
+প্ৰেমিক হোৱাৰ দুৰ্বাৰ বাখনা
+কিমান মন আৰু হেঁপাহ থাকিলে
+কল্পতীয়া সপোন এটাক আকোৱালি ল'ব পাৰি বাৰু
+মই ঠিক নাজানো, মই ঠিক নাজানো
+(সঁচাতে আংকাত মই বৰ কেঁচা আছিলো...!!!).</p>
+            </div>
+
+            <div class="poem">
+                <h3>শিক্ষকলৈ</h3>
+                <div class="title-english">To the Teacher</div>
+                <p>আপোষবিহীন যুদ্ধৰ কাৰণে
+তেওঁ নহ'ব পাৰে
+চে-গুয়েভাৰা, হো-চি-মিন
+মালালা কিম্বা ছ্যু-কি
+হাতত অস্ত্ৰ লৈ
+নিপীড়িতজনৰ দুচকুত হাজাৰ সপোন আঁকি
+অৰণ্যলৈ গুছি যোৱা
+ৰবিন হুড বা মেৰিয়েন ও
+নহ'ব পাৰে তেওঁ
+প্ৰেমৰ বাহাল পাথৰ খনত
+তেওঁ হয়তো নহয়
+ৰমিও-জুলিয়েট কিম্বা জংকি-পনই
+অথচ, নিজৰ ক্ষেত্ৰ খনত
+তেওঁ চে, হো-চি-মিন নতুবা
+মালালা, ছ্যু-কিৰ দৰেই সংগ্ৰামী
+নিপীড়িতজনৰ কাৰণে অৰণ্যলৈ গুছি যোৱা
+ৰবিন হুড-মেৰিয়েনৰ দৰেই ত্যাগী
+মানুহ গঢ়া কামাৰশালত
+তেওঁ পলে পলে ত্যাগ স্বীকাৰ কৰে
+এজন চে, হো-চি-মিন বা
+মালালা, ছ্যু-কিৰ নিৰ্মাণ কৰিবলৈ
+সংগ্ৰাম কৰে ৰবিন হুড-মেৰিয়েনৰ গঢ় দিবলৈ
+তেওঁৰ পৰশতেই প্ৰাণ পাই উঠে
+হাজাৰ ৰমিও-জুলিয়েট নতুবা জংকি-পনই
+তেওঁ সংগ্ৰামী, তেওঁ ত্যাগী
+তেওঁ মানুহ গঢ়া কামাৰশালৰ
+এক সুনিপুণ কামাৰ
+তেওঁ প্ৰকৃততে জীৱন যুদ্ধৰ
+এক আপোষবিহীন যোদ্ধা
+এনে আপোষবিহীন যোদ্ধাক 
+তুমি চেলুট জনাবা দিব্যলতা
+চেলুট...
+(সমাজৰ প্ৰতিটো স্তৰৰ শিক্ষকৰ হাতত শ্ৰদ্ধাৰে...)</p>
             </div>
 
         </main>
@@ -642,11 +1233,17 @@
         <footer>
             <div class="footer-symbol">✦</div>
             <p class="memorial">Forever in Our Hearts</p>
-            <p class="name">NISHANTA PARAJULI | নিশান্ত পৰাজুলী</p>
-            <p class="dates-footer">28th December 1984 — 2025</p>
+            <p class="memorial-assamese">চিৰদিন আমাৰ হৃদয়ত</p>
+            <p class="name">NISHANTA PARAJULI</p>
+            <p class="name-assamese">নিশান্ত পৰাজুলী</p>
+            <p class="dates-footer">২৮ ডিচেম্বৰ ১৯৮৪ — ২০২৫</p>
             <p class="message">
                 His words never found a publisher, but they found us. 
                 And now, they find you.
+            </p>
+            <p class="message-assamese">
+                তেওঁৰ শব্দই কেতিয়াও প্ৰকাশক নাপালে, কিন্তু আমাক পালে।
+                আৰু এতিয়া, তোমাকো পালে।
             </p>
         </footer>
 
