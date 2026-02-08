@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="as">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Poetry of Nishanta Parajuli | নিশান্ত পৰাজুলীৰ কবিতা</title>
+    <title>Poetry of Nishanta Parajuli | নিশান্ত পৰাজুলী</title>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Playfair+Display:wght@400;700&family=Great+Vibes&family=Noto+Serif+Bengali:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
         * {
@@ -15,9 +15,9 @@
         body {
             background: linear-gradient(135deg, #0d0d1a 0%, #1a1a2e 30%, #16213e 70%, #0f0f23 100%);
             min-height: 100vh;
-            font-family: 'Noto Serif Bengali', 'Cormorant Garamond', serif;
+            font-family: 'Cormorant Garamond', 'Noto Serif Bengali', serif;
             color: #e8e8e8;
-            line-height: 2;
+            line-height: 1.9;
             overflow-x: hidden;
         }
 
@@ -101,13 +101,6 @@
             font-style: italic;
         }
 
-        header .subtitle-assamese {
-            font-family: 'Noto Serif Bengali', serif;
-            font-size: 1.2rem;
-            color: #888;
-            margin-top: 5px;
-        }
-
         header .dates {
             margin-top: 20px;
             font-size: 1.1rem;
@@ -126,13 +119,6 @@
             font-family: 'Great Vibes', cursive;
             font-size: 2.5rem;
             color: #d4af37;
-            margin-bottom: 10px;
-        }
-
-        .about-section .h2-assamese {
-            font-family: 'Noto Serif Bengali', serif;
-            font-size: 1.5rem;
-            color: #888;
             margin-bottom: 40px;
         }
 
@@ -187,11 +173,12 @@
         }
 
         .detail-card .value {
-            font-family: 'Noto Serif Bengali', serif;
+            font-family: 'Playfair Display', serif;
             font-size: 1.1rem;
             color: #d4af37;
         }
 
+        /* Gallery Section */
         .gallery-section {
             max-width: 1000px;
             margin: 0 auto;
@@ -202,14 +189,6 @@
             font-family: 'Great Vibes', cursive;
             font-size: 2.5rem;
             color: #d4af37;
-            margin-bottom: 10px;
-            text-align: center;
-        }
-
-        .gallery-section .h2-assamese {
-            font-family: 'Noto Serif Bengali', serif;
-            font-size: 1.5rem;
-            color: #888;
             margin-bottom: 40px;
             text-align: center;
         }
@@ -265,7 +244,6 @@
             font-size: 1.1rem;
             transition: all 0.3s;
             position: relative;
-            font-family: 'Noto Serif Bengali', serif;
         }
 
         nav a::after {
@@ -295,22 +273,15 @@
 
         .section-title {
             font-family: 'Playfair Display', serif;
-            font-size: 2rem;
+            font-size: 2.2rem;
             text-align: center;
-            margin: 80px 0 20px;
+            margin: 80px 0 50px;
             color: #fff;
             padding-top: 20px;
+            position: relative;
         }
 
-        .section-title-assamese {
-            font-family: 'Noto Serif Bengali', serif;
-            font-size: 1.5rem;
-            text-align: center;
-            color: #d4af37;
-            margin-bottom: 50px;
-        }
-
-        .section-title-assamese::after {
+        .section-title::after {
             content: '✦';
             display: block;
             margin-top: 15px;
@@ -348,23 +319,15 @@
         }
 
         .poem h3 {
-            font-family: 'Noto Serif Bengali', serif;
-            font-size: 1.4rem;
+            font-family: 'Playfair Display', 'Noto Serif Bengali', serif;
+            font-size: 1.5rem;
             color: #d4af37;
-            margin-bottom: 5px;
-        }
-
-        .poem .title-english {
-            font-family: 'Playfair Display', serif;
-            font-size: 1rem;
-            color: #888;
             margin-bottom: 18px;
-            font-style: italic;
         }
 
         .poem p {
-            font-family: 'Noto Serif Bengali', serif;
-            font-size: 1.25rem;
+            font-family: 'Noto Serif Bengali', 'Cormorant Garamond', serif;
+            font-size: 1.3rem;
             white-space: pre-line;
             color: #e0e0e0;
         }
@@ -407,13 +370,6 @@
             font-family: 'Great Vibes', cursive;
             font-size: 2rem;
             color: #888;
-            margin-bottom: 5px;
-        }
-
-        footer .memorial-assamese {
-            font-family: 'Noto Serif Bengali', serif;
-            font-size: 1.3rem;
-            color: #666;
             margin-bottom: 15px;
         }
 
@@ -422,13 +378,6 @@
             font-size: 1.3rem;
             color: #aaa;
             letter-spacing: 2px;
-        }
-
-        footer .name-assamese {
-            font-family: 'Noto Serif Bengali', serif;
-            font-size: 1.2rem;
-            color: #d4af37;
-            margin-top: 5px;
         }
 
         footer .dates-footer {
@@ -445,20 +394,12 @@
             font-style: italic;
         }
 
-        footer .message-assamese {
-            font-family: 'Noto Serif Bengali', serif;
-            max-width: 500px;
-            margin: 10px auto 0;
-            font-size: 1.1rem;
-            color: #888;
-        }
-
         @media (max-width: 600px) {
             header h1 { font-size: 2.2rem; }
             .poem { padding: 25px 30px; }
             nav a { margin: 0 10px; font-size: 0.9rem; }
             .about-text { padding: 25px; }
-            .section-title { font-size: 1.6rem; }
+            .section-title { font-size: 1.8rem; }
             .gallery-grid { grid-template-columns: repeat(2, 1fr); }
         }
     </style>
@@ -485,50 +426,49 @@
             <h1>Nishanta Parajuli</h1>
             <p class="assamese-name">নিশান্ত পৰাজুলী</p>
             <p class="subtitle">Poet • Teacher • Artist of Words</p>
-            <p class="subtitle-assamese">কবি • শিক্ষক • শব্দৰ শিল্পী</p>
-            <p class="dates">২৮ ডিচেম্বৰ ১৯৮৪ — ২০২৫</p>
+            <p class="dates">28th December 1984 — 2025</p>
         </header>
 
         <section class="about-section">
             <h2>The Man Behind the Words</h2>
-            <p class="h2-assamese">শব্দৰ আঁৰৰ মানুহজন</p>
             
             <div class="about-text">
                 <p>
-                    নিশান্ত পৰাজুলীৰ জন্ম হৈছিল এক সাধাৰণ পৰিয়ালত। তেওঁ চৰকাৰী এল.পি. স্কুলত শিক্ষা গ্ৰহণ কৰিছিল, 
-                    য'ত তেওঁৰ প্ৰতিভাৰ বীজ প্ৰথম সিঁচা হৈছিল। জ্ঞানৰ পিয়াহে তেওঁক গুৱাহাটী বিশ্ববিদ্যালয়লৈ লৈ গৈছিল, 
-                    য'ত তেওঁ ইতিহাসত স্নাতক আৰু স্নাতকোত্তৰ ডিগ্ৰী লাভ কৰিছিল — এটা বিষয় যিয়ে পৃথিৱী আৰু ইয়াৰ কাহিনীবোৰৰ 
-                    প্ৰতি তেওঁৰ গভীৰ বুজাবুজি গঢ়ি তুলিছিল।
+                    Nishanta Parajuli was born with humble beginnings, completing his schooling at Balipukhuri LP School, 
+                    where the seeds of his brilliance were first sown. His thirst for knowledge led him to Gauhati University, 
+                    where he earned both his graduation and Master's degree in History : a subject that shaped his deep 
+                    understanding of the world and its stories.
                 </p>
                 <p>
-                    তেওঁ বিশেষভাৱে চোকা আছিল — এক মন যিয়ে জটিলতাক সহজে কাটিব পাৰিছিল। তেওঁ কুইজ প্ৰতিযোগিতা জিকিছিল, 
-                    বন্ধুসকলৰ মাজত এনে এজন হিচাপে খ্যাতি গঢ়ি তুলিছিল যিয়ে আনে নজনা কথা জানিছিল। কিন্তু জ্ঞানে তেওঁক কেতিয়াও 
-                    দূৰত্ব স্থাপন কৰা নাছিল। তেওঁ আছিল উষ্ণ, মজাৰ, সদায় কৌতুক কৰিবলৈ, তাচ খেলিবলৈ, বা কেৰম খেলিবলৈ সাজু।
+                    He was particularly sharp, a mind that could cut through complexity with ease. He won quiz competitions, 
+                    building a reputation among friends as someone who knew things others didn't. But knowledge never made him 
+                    distant. He was warm, funny, always ready to crack a joke, deal a hand of cards, or challenge someone to 
+                    a game of carrom.
                 </p>
                 <p>
-                    তেওঁ ৰাজনীতি ঘনিষ্ঠভাৱে অনুসৰণ কৰিছিল, দেশৰ নাড়ী বুজি পাইছিল, আৰু তেওঁৰ মতামত গুৰুত্বপূৰ্ণ আছিল। 
-                    তথাপিও তেওঁ শান্ত আছিল — যিকোনো কোঠাত এক নিৰৱ উপস্থিতি, পৰ্যবেক্ষণ কৰি, হাঁহি থাকি, জানি থাকি। 
-                    তেওঁ জীৱন উৎসৰ্গা কৰিছিল জোনাই, অসমৰ এখন উচ্চতৰ মাধ্যমিক বিদ্যালয়ত শিক্ষকতা কৰি, 
-                    নতুন প্ৰজন্মক সেই একে আবেগেৰে গঢ়ি তুলিছিল যিটো তেওঁ কবিতাত ঢালিছিল।
+                    He followed politics closely, understood the pulse of the nation, and had opinions that mattered. 
+                    Yet he remained calm, a quiet presence in any room, observing, smiling, knowing. He dedicated his life 
+                    to teaching at a Higher Secondary School in Jonai, Assam, shaping young minds with the same passion 
+                    he poured into his poetry.
                 </p>
             </div>
 
             <div class="highlight-quote">
-                "তেওঁ সঁচাকৈয়ে এজন শিল্পী আছিল — যিজনে কেনভাছত নহয়, শব্দেৰে আঁকিছিল যিবোৰ গভীৰলৈ কাটি গৈছিল আৰু দীৰ্ঘদিন থাকি গৈছিল।"
+                "He was an artist, truly- one who painted not on canvas, but with words that cut deep and lingered long."
             </div>
 
             <div class="life-details">
                 <div class="detail-card">
-                    <div class="label">শিক্ষা</div>
-                    <div class="value">এম.এ. ইতিহাস, গুৱাহাটী বিশ্ববিদ্যালয়</div>
+                    <div class="label">Education</div>
+                    <div class="value">M.A. in History, Gauhati University</div>
                 </div>
                 <div class="detail-card">
-                    <div class="label">পেছা</div>
-                    <div class="value">শিক্ষক, জোনাই, অসম</div>
+                    <div class="label">Profession</div>
+                    <div class="value">Teacher, Jonai, Assam</div>
                 </div>
                 <div class="detail-card">
-                    <div class="label">আবেগ</div>
-                    <div class="value">কবিতা, কুইজ, তাচ আৰু কেৰম</div>
+                    <div class="label">Passions</div>
+                    <div class="value">Poetry, Quiz, & Politics</div>
                 </div>
             </div>
         </section>
@@ -536,23 +476,22 @@
         <!-- Photo Gallery -->
         <section class="gallery-section">
             <h2>Memories</h2>
-            <p class="h2-assamese">স্মৃতিবোৰ</p>
             <div class="gallery-grid">
-                <div class="gallery-item"><img src="pic1.jpg" alt="নিশান্ত পৰাজুলী"></div>
-                <div class="gallery-item"><img src="pic2.jpg" alt="নিশান্ত পৰাজুলী"></div>
-                <div class="gallery-item"><img src="pic3.jpg" alt="নিশান্ত পৰাজুলী"></div>
-                <div class="gallery-item"><img src="pic4.jpg" alt="নিশান্ত পৰাজুলী"></div>
-                <div class="gallery-item"><img src="pic5.jpg" alt="নিশান্ত পৰাজুলী"></div>
-                <div class="gallery-item"><img src="pic6.jpg" alt="নিশান্ত পৰাজুলী"></div>
-                <div class="gallery-item"><img src="pic7.jpg" alt="নিশান্ত পৰাজুলী"></div>
-                <div class="gallery-item"><img src="pic8.jpg" alt="নিশান্ত পৰাজুলী"></div>
+                <div class="gallery-item"><img src="pic1.jpg" alt="Nishanta Parajuli"></div>
+                <div class="gallery-item"><img src="pic2.jpg" alt="Nishanta Parajuli"></div>
+                <div class="gallery-item"><img src="pic3.jpg" alt="Nishanta Parajuli"></div>
+                <div class="gallery-item"><img src="pic4.jpg" alt="Nishanta Parajuli"></div>
+                <div class="gallery-item"><img src="pic5.jpg" alt="Nishanta Parajuli"></div>
+                <div class="gallery-item"><img src="pic6.jpg" alt="Nishanta Parajuli"></div>
+                <div class="gallery-item"><img src="pic7.jpg" alt="Nishanta Parajuli"></div>
+                <div class="gallery-item"><img src="pic8.jpg" alt="Nishanta Parajuli"></div>
             </div>
         </section>
 
         <nav>
-            <a href="#short">চুটি পদ</a>
-            <a href="#medium">মজলীয়া কবিতা</a>
-            <a href="#longer">দীঘলীয়া কবিতা</a>
+            <a href="#short">Short Verses</a>
+            <a href="#medium">Medium Poems</a>
+            <a href="#longer">Longer Poems</a>
         </nav>
 
         <main>
