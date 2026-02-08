@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poetry of [Uncle's Name]</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f0f23 100%);
+            min-height: 100vh;
+            font-family: 'Cormorant Garamond', serif;
+            color: #e8e8e8;
+            line-height: 1.8;
+        }
+
+        header {
+            text-align: center;
+            padding: 80px 20px 60px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            color: #fff;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+
+        header p {
+            font-size: 1.3rem;
+            color: #a0a0a0;
+            font-style: italic;
+        }
+
+        .intro {
+            max-width: 700px;
+            margin: 50px auto;
+            padding: 0 20px;
+            text-align: center;
+            font-size: 1.2rem;
+            color: #c0c0c0;
+        }
+
+        nav {
+            text-align: center;
+            padding: 30px;
+            position: sticky;
+            top: 0;
+            background: rgba(15, 15, 35, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 100;
+        }
+
+        nav a {
+            color: #888;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #fff;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            text-align: center;
+            margin: 60px 0 40px;
+            color: #fff;
+            padding-top: 20px;
+        }
+
+        .poem {
+            background: rgba(255,255,255,0.03);
+            border-left: 3px solid #4a4a6a;
+            padding: 30px 40px;
+            margin: 30px 0;
+            border-radius: 0 10px 10px 0;
+            transition: transform 0.3s, background 0.3s;
+        }
+
+        .poem:hover {
+            transform: translateX(5px);
+            background: rgba(255,255,255,0.05);
+        }
+
+        .poem h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            color: #d4af37;
+            margin-bottom: 15px;
+        }
+
+        .poem p {
+            font-size: 1.25rem;
+            white-space: pre-line;
+            color: #e0e0e0;
+        }
+
+        .poem .date {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 15px;
+            font-style: italic;
+        }
+
+        footer {
+            text-align: center;
+            padding: 60px 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            margin-top: 80px;
+        }
+
+        footer p {
+            color: #666;
+            font-size: 1rem;
+        }
+
+        .memorial {
+            font-size: 1.3rem;
+            color: #888;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 600px) {
+            header h1 { font-size: 2rem; }
+            .poem { padding: 20px 25px; }
+            nav a { margin: 0 10px; font-size: 0.95rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Poetry of [Uncle's Name]</h1>
+        <p>Words that remain</p>
+    </header>
+
+    <p class="intro">
+        Write a short introduction about your uncle here. Who he was, 
+        what poetry meant to him, and why these words matter.
+    </p>
+
+    <nav>
+        <a href="#two-liners">Two-Liners</a>
+        <a href="#three-liners">Three-Liners</a>
+        <a href="#longer">Longer Poems</a>
+    </nav>
+
+    <main>
+
+        <!-- ============ TWO-LINERS ============ -->
+        <h2 class="section-title" id="two-liners">Two-Liners</h2>
+
+        <div class="poem">
+            <h3>Poem Title Here</h3>
+            <p>First line of the poem goes here
+Second line of the poem goes here</p>
+            <div class="date">— Date or source (optional)</div>
+        </div>
+
+        <div class="poem">
+            <h3>Another Poem</h3>
+            <p>Copy paste your uncle's words here
+The second line appears below</p>
+        </div>
+
+        <!-- ADD MORE TWO-LINERS BY COPYING THE BLOCK ABOVE -->
+
+
+        <!-- ============ THREE-LINERS ============ -->
+        <h2 class="section-title" id="three-liners">Three-Liners</h2>
+
+        <div class="poem">
+            <h3>Poem Title</h3>
+            <p>First line here
+Second line here
+Third line here</p>
+        </div>
+
+        <!-- ADD MORE THREE-LINERS BY COPYING THE BLOCK ABOVE -->
+
+
+        <!-- ============ LONGER POEMS ============ -->
+        <h2 class="section-title" id="longer">Longer Poems</h2>
+
+        <div class="poem">
+            <h3>Poem Title</h3>
+            <p>Line one
+Line two
+Line three
+Line four
+Add as many lines as needed</p>
+        </div>
+
+        <!-- ADD MORE LONGER POEMS BY COPYING THE BLOCK ABOVE -->
+
+    </main>
+
+    <footer>
+        <p class="memorial">In loving memory</p>
+        <p>[Uncle's Name] • [Birth Year] – [Year of Passing]</p>
+    </footer>
+
+</body>
+</html>
