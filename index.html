@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Poetry of [Uncle's Name]</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <title>Poetry of Nishanta Parajuli</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Playfair+Display:wght@400;700&family=Great+Vibes&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -13,40 +13,174 @@
         }
 
         body {
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f0f23 100%);
+            background: linear-gradient(135deg, #0d0d1a 0%, #1a1a2e 30%, #16213e 70%, #0f0f23 100%);
             min-height: 100vh;
             font-family: 'Cormorant Garamond', serif;
             color: #e8e8e8;
-            line-height: 1.8;
+            line-height: 1.9;
+            overflow-x: hidden;
+        }
+
+        /* Floating particles background */
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: 0;
+        }
+
+        .particle {
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            animation: float 20s infinite;
+        }
+
+        .particle:nth-child(1) { left: 10%; animation-delay: 0s; animation-duration: 25s; }
+        .particle:nth-child(2) { left: 20%; animation-delay: 2s; animation-duration: 20s; }
+        .particle:nth-child(3) { left: 30%; animation-delay: 4s; animation-duration: 28s; }
+        .particle:nth-child(4) { left: 40%; animation-delay: 1s; animation-duration: 22s; }
+        .particle:nth-child(5) { left: 50%; animation-delay: 3s; animation-duration: 26s; }
+        .particle:nth-child(6) { left: 60%; animation-delay: 5s; animation-duration: 21s; }
+        .particle:nth-child(7) { left: 70%; animation-delay: 0.5s; animation-duration: 24s; }
+        .particle:nth-child(8) { left: 80%; animation-delay: 2.5s; animation-duration: 27s; }
+        .particle:nth-child(9) { left: 90%; animation-delay: 4.5s; animation-duration: 23s; }
+        .particle:nth-child(10) { left: 15%; animation-delay: 1.5s; animation-duration: 29s; }
+
+        @keyframes float {
+            0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+            10% { opacity: 0.3; }
+            90% { opacity: 0.3; }
+            100% { transform: translateY(-100vh) rotate(720deg); opacity: 0; }
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
         }
 
         header {
             text-align: center;
-            padding: 80px 20px 60px;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding: 100px 20px 80px;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+            background: radial-gradient(ellipse at center top, rgba(212, 175, 55, 0.05) 0%, transparent 70%);
+        }
+
+        .name-decorative {
+            font-family: 'Great Vibes', cursive;
+            font-size: 1.5rem;
+            color: #d4af37;
+            margin-bottom: 10px;
+            letter-spacing: 3px;
         }
 
         header h1 {
             font-family: 'Playfair Display', serif;
-            font-size: 3rem;
+            font-size: 3.5rem;
             color: #fff;
-            margin-bottom: 10px;
-            letter-spacing: 2px;
+            margin-bottom: 15px;
+            letter-spacing: 3px;
+            text-shadow: 0 0 40px rgba(212, 175, 55, 0.2);
         }
 
-        header p {
-            font-size: 1.3rem;
+        header .subtitle {
+            font-size: 1.4rem;
             color: #a0a0a0;
             font-style: italic;
         }
 
-        .intro {
-            max-width: 700px;
-            margin: 50px auto;
-            padding: 0 20px;
+        header .dates {
+            margin-top: 20px;
+            font-size: 1.1rem;
+            color: #666;
+            letter-spacing: 2px;
+        }
+
+        /* About Section */
+        .about-section {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 80px 30px;
             text-align: center;
+        }
+
+        .about-section h2 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 2.5rem;
+            color: #d4af37;
+            margin-bottom: 40px;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+
+        .about-text {
+            background: rgba(255,255,255,0.02);
+            border: 1px solid rgba(255,255,255,0.05);
+            border-radius: 15px;
+            padding: 40px;
+            text-align: left;
             font-size: 1.2rem;
             color: #c0c0c0;
+            line-height: 2;
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+        }
+
+        .about-text p:last-child {
+            margin-bottom: 0;
+        }
+
+        .highlight-quote {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(212, 175, 55, 0.02) 100%);
+            border-left: 4px solid #d4af37;
+            padding: 30px 40px;
+            margin: 40px 0;
+            font-size: 1.4rem;
+            font-style: italic;
+            color: #e0e0e0;
+            border-radius: 0 15px 15px 0;
+        }
+
+        .life-details {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .detail-card {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.08);
+            padding: 20px 30px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .detail-card .label {
+            font-size: 0.85rem;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 8px;
+        }
+
+        .detail-card .value {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            color: #d4af37;
         }
 
         nav {
@@ -54,169 +188,304 @@
             padding: 30px;
             position: sticky;
             top: 0;
-            background: rgba(15, 15, 35, 0.95);
-            backdrop-filter: blur(10px);
+            background: rgba(13, 13, 26, 0.95);
+            backdrop-filter: blur(15px);
             z-index: 100;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
         }
 
         nav a {
             color: #888;
             text-decoration: none;
-            margin: 0 20px;
+            margin: 0 25px;
             font-size: 1.1rem;
-            transition: color 0.3s;
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: #d4af37;
+            transition: width 0.3s;
         }
 
         nav a:hover {
-            color: #fff;
+            color: #d4af37;
+        }
+
+        nav a:hover::after {
+            width: 100%;
         }
 
         main {
-            max-width: 800px;
+            max-width: 850px;
             margin: 0 auto;
             padding: 40px 20px;
         }
 
         .section-title {
             font-family: 'Playfair Display', serif;
-            font-size: 2rem;
+            font-size: 2.2rem;
             text-align: center;
-            margin: 60px 0 40px;
+            margin: 80px 0 50px;
             color: #fff;
             padding-top: 20px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '✦';
+            display: block;
+            margin-top: 15px;
+            color: #d4af37;
+            font-size: 1rem;
         }
 
         .poem {
-            background: rgba(255,255,255,0.03);
+            background: rgba(255,255,255,0.02);
             border-left: 3px solid #4a4a6a;
-            padding: 30px 40px;
-            margin: 30px 0;
-            border-radius: 0 10px 10px 0;
-            transition: transform 0.3s, background 0.3s;
+            padding: 35px 45px;
+            margin: 35px 0;
+            border-radius: 0 15px 15px 0;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .poem::before {
+            content: '"';
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-family: 'Playfair Display', serif;
+            font-size: 5rem;
+            color: rgba(212, 175, 55, 0.08);
+            line-height: 1;
         }
 
         .poem:hover {
-            transform: translateX(5px);
-            background: rgba(255,255,255,0.05);
+            transform: translateX(8px);
+            background: rgba(255,255,255,0.04);
+            border-left-color: #d4af37;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
         }
 
         .poem h3 {
             font-family: 'Playfair Display', serif;
-            font-size: 1.4rem;
+            font-size: 1.5rem;
             color: #d4af37;
-            margin-bottom: 15px;
+            margin-bottom: 18px;
         }
 
         .poem p {
-            font-size: 1.25rem;
+            font-size: 1.3rem;
             white-space: pre-line;
             color: #e0e0e0;
         }
 
         .poem .date {
             font-size: 0.9rem;
-            color: #666;
-            margin-top: 15px;
+            color: #555;
+            margin-top: 18px;
             font-style: italic;
         }
 
         footer {
             text-align: center;
-            padding: 60px 20px;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            margin-top: 80px;
+            padding: 80px 20px;
+            border-top: 1px solid rgba(255,255,255,0.08);
+            margin-top: 100px;
+            background: radial-gradient(ellipse at center bottom, rgba(212, 175, 55, 0.03) 0%, transparent 70%);
         }
 
-        footer p {
-            color: #666;
-            font-size: 1rem;
+        .footer-symbol {
+            font-size: 2rem;
+            color: #d4af37;
+            margin-bottom: 20px;
         }
 
-        .memorial {
-            font-size: 1.3rem;
+        footer .memorial {
+            font-family: 'Great Vibes', cursive;
+            font-size: 2rem;
             color: #888;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
+        }
+
+        footer .name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            color: #aaa;
+            letter-spacing: 2px;
+        }
+
+        footer .dates-footer {
+            font-size: 1rem;
+            color: #555;
+            margin-top: 10px;
+        }
+
+        footer .message {
+            max-width: 500px;
+            margin: 30px auto 0;
+            font-size: 1.1rem;
+            color: #666;
+            font-style: italic;
         }
 
         @media (max-width: 600px) {
-            header h1 { font-size: 2rem; }
-            .poem { padding: 20px 25px; }
-            nav a { margin: 0 10px; font-size: 0.95rem; }
+            header h1 { font-size: 2.2rem; }
+            .poem { padding: 25px 30px; }
+            nav a { margin: 0 12px; font-size: 0.95rem; }
+            .about-text { padding: 25px; }
+            .section-title { font-size: 1.8rem; }
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Poetry of [Uncle's Name]</h1>
-        <p>Words that remain</p>
-    </header>
+    <!-- Floating Particles -->
+    <div class="particles">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
 
-    <p class="intro">
-        Write a short introduction about your uncle here. Who he was, 
-        what poetry meant to him, and why these words matter.
-    </p>
+    <div class="content">
 
-    <nav>
-        <a href="#two-liners">Two-Liners</a>
-        <a href="#three-liners">Three-Liners</a>
-        <a href="#longer">Longer Poems</a>
-    </nav>
+        <header>
+            <div class="name-decorative">In Loving Memory of</div>
+            <h1>Nishanta Parajuli</h1>
+            <p class="subtitle">Poet • Teacher • Artist of Words</p>
+            <p class="dates">28th December 1984 — 2025</p>
+        </header>
 
-    <main>
+        <!-- About Section -->
+        <section class="about-section">
+            <h2>The Man Behind the Words</h2>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        Nishanta Parajuli was born with humble beginnings, completing his schooling at a Government LP School, 
+                        where the seeds of his brilliance were first sown. His thirst for knowledge led him to Gauhati University, 
+                        where he earned both his graduation and Master's degree in History — a subject that shaped his deep 
+                        understanding of the world and its stories.
+                    </p>
+                    <p>
+                        He was particularly sharp — a mind that could cut through complexity with ease. He won quiz competitions, 
+                        building a reputation among friends as someone who knew things others didn't. But knowledge never made him 
+                        distant. He was warm, funny, always ready to crack a joke, deal a hand of cards, or challenge someone to 
+                        a game of carrom.
+                    </p>
+                    <p>
+                        He followed politics closely, understood the pulse of the nation, and had opinions that mattered. 
+                        Yet he remained calm — a quiet presence in any room, observing, smiling, knowing. He dedicated his life 
+                        to teaching at a Higher Secondary School in Jonai, Assam, shaping young minds with the same passion 
+                        he poured into his poetry.
+                    </p>
+                </div>
+            </div>
 
-        <!-- ============ TWO-LINERS ============ -->
-        <h2 class="section-title" id="two-liners">Two-Liners</h2>
+            <div class="highlight-quote">
+                "He was an artist, truly — one who painted not on canvas, but with words that cut deep and lingered long."
+            </div>
 
-        <div class="poem">
-            <h3>Poem Title Here</h3>
-            <p>First line of the poem goes here
+            <div class="life-details">
+                <div class="detail-card">
+                    <div class="label">Education</div>
+                    <div class="value">M.A. in History, Gauhati University</div>
+                </div>
+                <div class="detail-card">
+                    <div class="label">Profession</div>
+                    <div class="value">Teacher, Jonai, Assam</div>
+                </div>
+                <div class="detail-card">
+                    <div class="label">Passions</div>
+                    <div class="value">Poetry, Quiz, Cards & Carrom</div>
+                </div>
+            </div>
+        </section>
+
+        <nav>
+            <a href="#two-liners">Two-Liners</a>
+            <a href="#three-liners">Three-Liners</a>
+            <a href="#longer">Longer Poems</a>
+        </nav>
+
+        <main>
+
+            <!-- ============ TWO-LINERS ============ -->
+            <h2 class="section-title" id="two-liners">Two-Liners</h2>
+
+            <div class="poem">
+                <h3>Poem Title Here</h3>
+                <p>First line of the poem goes here
 Second line of the poem goes here</p>
-            <div class="date">— Date or source (optional)</div>
-        </div>
+                <div class="date">— From Facebook</div>
+            </div>
 
-        <div class="poem">
-            <h3>Another Poem</h3>
-            <p>Copy paste your uncle's words here
+            <div class="poem">
+                <h3>Another Poem</h3>
+                <p>Copy paste your uncle's words here
 The second line appears below</p>
-        </div>
+            </div>
 
-        <!-- ADD MORE TWO-LINERS BY COPYING THE BLOCK ABOVE -->
+            <!-- ADD MORE TWO-LINERS BY COPYING THE BLOCK ABOVE -->
 
 
-        <!-- ============ THREE-LINERS ============ -->
-        <h2 class="section-title" id="three-liners">Three-Liners</h2>
+            <!-- ============ THREE-LINERS ============ -->
+            <h2 class="section-title" id="three-liners">Three-Liners</h2>
 
-        <div class="poem">
-            <h3>Poem Title</h3>
-            <p>First line here
+            <div class="poem">
+                <h3>Poem Title</h3>
+                <p>First line here
 Second line here
 Third line here</p>
-        </div>
+            </div>
 
-        <!-- ADD MORE THREE-LINERS BY COPYING THE BLOCK ABOVE -->
+            <!-- ADD MORE THREE-LINERS BY COPYING THE BLOCK ABOVE -->
 
 
-        <!-- ============ LONGER POEMS ============ -->
-        <h2 class="section-title" id="longer">Longer Poems</h2>
+            <!-- ============ LONGER POEMS ============ -->
+            <h2 class="section-title" id="longer">Longer Poems</h2>
 
-        <div class="poem">
-            <h3>Poem Title</h3>
-            <p>Line one
+            <div class="poem">
+                <h3>Poem Title</h3>
+                <p>Line one
 Line two
 Line three
 Line four
 Add as many lines as needed</p>
-        </div>
+            </div>
 
-        <!-- ADD MORE LONGER POEMS BY COPYING THE BLOCK ABOVE -->
+            <!-- ADD MORE LONGER POEMS BY COPYING THE BLOCK ABOVE -->
 
-    </main>
+        </main>
 
-    <footer>
-        <p class="memorial">In loving memory</p>
-        <p>[Uncle's Name] • [Birth Year] – [Year of Passing]</p>
-    </footer>
+        <footer>
+            <div class="footer-symbol">✦</div>
+            <p class="memorial">Forever in Our Hearts</p>
+            <p class="name">NISHANTA PARAJULI</p>
+            <p class="dates-footer">28th December 1984 — 2025</p>
+            <p class="message">
+                His words never found a publisher, but they found us. 
+                And now, they find you.
+            </p>
+        </footer>
+
+    </div>
 
 </body>
 </html>
